@@ -165,7 +165,7 @@ These classes represent involved entities.
 
 ### `Constant`
 
-constants such as `EARTH_RADIUS_KM` and `SPEED` used in the distance and time calculations are defined here.
+constants such as `EARTH_RADIUS_KM` and `AVERAGE_SPEED_KMH` used in the distance and time calculations are defined here.
 
 ## Building and Running the Application
 
