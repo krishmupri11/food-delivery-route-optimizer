@@ -87,57 +87,46 @@ customer locations, as well as preparation times for each restaurant.
 You can test the API using a tool like `curl` or Postman.
 
 #### Using `curl`
-```curl --location --request GET 'http://localhost:8080/api/v1/optimal-route' \
+```
+curl --location --request GET 'http://localhost:8080/api/v1/optimal-route' \
 --header 'Content-Type: application/json' \
 --data '{
-  "deliveryPersonLocation": {
-    "latitude": 2.0,
-    "longitude": 3.0
-  },
-  "restaurantList": [
-    {
-      "location": {
-        "latitude": 7.0,
-        "longitude": 1.0
-      },
-      "preptime": 1.3
+    "deliveryPersonLocation": {
+        "latitude": 12.9716,
+        "longitude": 77.5946
     },
-    {
-     "location": {
-       "latitude": 8.9,
-       "longitude": 1.0
-      },
-      "preptime": 7.3
-    },
-    {
-    "location":{
-      "latitude": 9.0,
-      "longitude": 1.0
-      },
-      "preptime": 8.3
-    }
-  ],
-  "customerList": [
-    {
-      "location":{
-        "latitude": 7.0,
-        "longitude": 8.0
-      }
-    },
-    {
-      "location":{
-        "latitude": 7.9,
-        "longitude": 1.7
-      }
-    },
-    {
-      "location":{
-        "latitude": 2.9,
-        "longitude": 3.6
-      }
-    }
-  ]
-}'```
+    "restaurantList": [
+        {
+            "location": {
+                "latitude": 12.9352,
+                "longitude": 77.6257
+            },
+            "preptime": 0.5
+        },
+        {
+            "location": {
+                "latitude": 13.0352,
+                "longitude": 77.5970
+            },
+            "preptime": 0.3
+        }
+    ],
+    "customerList": [
+        {
+            "location": {
+                "latitude": 12.9784,
+                "longitude": 77.6408
+            }
+        },
+        {
+            "location": {
+                "latitude": 13.1152,
+                "longitude": 77.5970
+            }
+        }
+    ]
+}'
+```
 
 
 ## Classes and Methods
