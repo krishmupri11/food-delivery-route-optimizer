@@ -8,6 +8,6 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 public class OptimalRouteResponse {
-    private double time;
+    private String time;
     private List<String> path;
 }

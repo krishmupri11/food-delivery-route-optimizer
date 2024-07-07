@@ -11,12 +11,14 @@ import com.optimal.route.food_delivery.strategy.HaversineDistanceCalStrategy;
 import com.optimal.route.food_delivery.util.PermutationUtil;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
 public class DeliveryOptimizerService {
+    private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("#.##");
 
     public OptimalRouteResponse getOptimalRoute(OptimalRouteRequest request){
         DistanceCalculationsStrategy distanceCalculationsStrategy = new HaversineDistanceCalStrategy();
@@ -118,7 +120,7 @@ public class DeliveryOptimizerService {
             }
         }
 
-        return new OptimalRouteResponse(minTime, optimalPath);
+        return new OptimalRouteResponse(DECIMAL_FORMAT.format(minTime), optimalPath);
     }
 
 
