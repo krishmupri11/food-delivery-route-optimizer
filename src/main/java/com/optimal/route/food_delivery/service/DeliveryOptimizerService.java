@@ -83,7 +83,7 @@ public class DeliveryOptimizerService {
      * @param distanceCalculationsStrategy
      * @return
      */
-    public static OptimalRouteResponse findOptimalRoute(OptimalRouteRequest request, DistanceCalculationsStrategy distanceCalculationsStrategy) {
+    public OptimalRouteResponse findOptimalRoute(OptimalRouteRequest request, DistanceCalculationsStrategy distanceCalculationsStrategy) {
         List<Restaurant> restaurantList = request.getRestaurantList();
         List<Customer> customerList = request.getCustomerList();
         int totalOrder = restaurantList.size();
